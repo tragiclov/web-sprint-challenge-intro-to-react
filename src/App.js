@@ -4,6 +4,8 @@ import axios from 'axios';
 import styled from 'styled-components';
 import Character from './components/Character';
 import Details from './components/Details';
+import { response } from 'msw';
+import { set } from 'msw/lib/types/context';
 
 export default function App (){
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -24,5 +26,21 @@ export default function App (){
   const closeDetails = () =>{
     setCurrentCharacter(null);
   };
-  
+  useEffect(() => {
+    console.log("Getting the characters...");
+    axios.get("https://swapi.dev/api/people")
+    .then(response => {
+      const characters = response.data;
+      let id = 1;
+      characters.forEach(item => item.id = id++);
+      console.log(characters);
+      setCharacters(characters);
+    })
+    .catch(err =>{
+      console.error(err);
+      setError(err);
+    })
+  });
 }
+
+
