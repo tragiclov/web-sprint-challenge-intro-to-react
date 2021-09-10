@@ -14,12 +14,15 @@ export default function App (){
   // sync up with, if any.
   const [characters, setCharacters] = useState(null);
   const [currentCharacter, setCurrentCharacter] = useState(null);
-  const [error, setError]
-  return (
-    <div className="App">
-      <h1 className="Header">Characters</h1>
-    </div>
-  );
-}
+  const [error, setError] = useState(null);
 
-export default App;
+
+  const openDetails = (id) =>{
+  const character = characters.filter(item => item.id === id);
+  setCurrentCharacter(character);
+};
+  const closeDetails = () =>{
+    setCurrentCharacter(null);
+  };
+  
+}
