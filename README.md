@@ -81,6 +81,13 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  React is the framework that can be used to develop single-page and mobile applications. This project is a single-page app to show characters.
+
 1. Describe component state.
+  State is the slice of truth and the area that holds the data in React.
+
 1. Describe props.
+  Props are the vehicle that carry the data to the components.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+Side-effects are anything that affects something outside of the scope of the function that is being executed. By calling an API and manipulating the data from that api.

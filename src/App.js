@@ -4,7 +4,7 @@ import axios from 'axios';
 import {BASE_URL} from "./constants"
 import Character from "./components/Character"
 import styled from 'styled-components';
-import images from './images/ewok.jpg'
+import images from './images/pk-bg.jpg'
 
 const StyledBackground = styled.div`
   background-image: url(${images});
